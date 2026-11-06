@@ -1,0 +1,25 @@
+---
+title: Die Karte ausprobieren
+description: 'Die 3D-Karte von Kept im Browser, mit einem Beispielhaus: Etagen, Räume, Regale und Kisten, dazu Markierungen für Knappes, Verliehenes und Fälliges. Nichts wird gespeichert.'
+template: splash
+---
+
+import TryMap from '../../../../components/try-map/TryMap.astro';
+
+<TryMap lang="de" />
+
+## Was du ausprobieren kannst
+
+Die Karte selbst ist noch englisch; die Namen der Knöpfe stehen hier deshalb so, wie du sie siehst.
+
+- Tippe auf einen Raum, ein Regal oder eine Kiste: Die Karte sagt, wo es ist und was darin liegt. **Details** zeigt den Rest: Typ und Schlagwörter, bei manchen Gegenständen ein Foto, und den QR-Code des Etiketts.
+- **What's in** unter der Karte listet die Gegenstände jedes Raums. Finde einen über seinen Namen oder die Kurz-ID auf seinem Etikett, wähle eine Etage oder schalte auf **Needs attention** um. Ein Code erscheint als gelbes Klebeband nur bei Gegenständen mit gedrucktem Etikett.
+- **Plan** schaut senkrecht von oben. Die Etagenknöpfe (**G**, **F**, **R**) gehen hoch und runter; **All** stapelt sie.
+- **Low stock**, **Lent out** und **Due soon** schalten ihre Markierungen ein und aus.
+- **Arrange**: Gegenstände ziehen, den Boden eines Raums festhalten und ihn woandershin ziehen (sein Inhalt kommt mit), einen Raum an seiner gelben Ecke in der Größe ändern, einen Raum zeichnen. **Put on…** stellt einen kleinen Gegenstand auf einen Schreibtisch oder ein Regal. **Done** behält die Änderung, bis du die Seite verlässt, und bietet **Undo** an; **Cancel** fragt vorher nach.
+- Schalte **Detailed models** aus, dann lädt die Karte gar keine Modelle herunter.
+
+Das ist die Karte, die Kept mitbringt, mit denselben Modellen. [Die Standortkarte](/de/users/location-map/)
+erklärt, wie ein echter Standort zu seinen Etagen und Räumen kommt. Die ganze App mit einem
+Beispielhaushalt: [Kept ausprobieren](/de/try/kept/). Um Kept auf deinem eigenen Server zu
+betreiben, fang mit [Installation mit Docker Compose](/de/install/compose/) an.

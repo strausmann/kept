@@ -17,6 +17,6 @@ export function tryAppBase(docsBase: string): string {
  * The link that opens it: the page's language goes along (`?lang=ar`); the docs theme is added
  * when it is clicked (TryKept.astro), so the app opens in the theme the page is in.
  */
-export function tryAppHref(docsBase: string, lang: 'en' | 'ar'): string {
+export function tryAppHref(docsBase: string, lang: 'en' | 'ar' | 'de'): string {
   return `${tryAppBase(docsBase)}?lang=${lang}`;
 }

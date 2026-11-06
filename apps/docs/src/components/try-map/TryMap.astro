@@ -9,11 +9,11 @@
 import { withBase } from '../landing/base';
 
 interface Props {
-  lang: 'en' | 'ar';
+  lang: 'en' | 'ar' | 'de';
 }
 
 const { lang } = Astro.props;
-const install = withBase(lang === 'ar' ? '/ar/install/compose/' : '/install/compose/');
+const install = withBase(lang === 'en' ? '/install/compose/' : `/${lang}/install/compose/`);
 const t = {
   en: {
     note: 'A sample home, in your browser. Nothing you change is saved or sent anywhere.',
@@ -37,6 +37,20 @@ const t = {
     credit: [
       'الأثاث والنباتات والأدوات ووحدات التكييف نماذج مجانية من ',
       ' ‏(CC0)، مُصغَّرة للهواتف. أوقف «نماذج مفصّلة» كي لا يُنزَّل أي منها.',
+    ],
+  },
+  // The page around the map; the map itself (strings.ts, sample.ts) has English and Arabic only,
+  // so on a German page it draws in English.
+  de: {
+    note: 'Ein Beispielhaus, in deinem Browser. Nichts, was du änderst, wird gespeichert oder irgendwohin gesendet.',
+    reset: 'Zurücksetzen',
+    install: 'Kept installieren',
+    loading: 'Die Karte wird geladen…',
+    failed: 'Die Karte konnte nicht geladen werden. Lade die Seite neu, um es noch einmal zu versuchen.',
+    noscript: 'Die Karte braucht JavaScript.',
+    credit: [
+      'Möbel, Pflanzen, Werkzeuge und die Klimageräte sind freie Modelle von ',
+      ' (CC0), für Handys verkleinert. Schalte „Detailed models“ aus, dann wird keines heruntergeladen.',
     ],
   },
 }[lang];

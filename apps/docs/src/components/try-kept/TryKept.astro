@@ -10,7 +10,7 @@ import { tryAppHref } from '../../try-kept';
 import Opened from '../landing/Opened.astro';
 
 interface Props {
-  lang: 'en' | 'ar';
+  lang: 'en' | 'ar' | 'de';
 }
 
 const { lang } = Astro.props;
@@ -29,6 +29,13 @@ const t = {
     desktop:
       'الصفحة الرئيسية في Kept على حاسوب: بطاقات «يحتاجك» والمواقع بمعاينات خرائطها والاختصارات',
     phone: 'الصفحة الرئيسية في Kept على هاتف: بطاقات «يحتاجك» والاختصارات فوق شريط التبويب',
+  },
+  de: {
+    note: 'Die ganze App mit einem Beispielhaushalt, in deinem Browser. Nichts wird gespeichert oder gesendet.',
+    open: 'Kept öffnen',
+    desktop:
+      'Start von Kept auf einem Desktop: Erste Schritte, die Kacheln unter „Braucht dich“, die Standorte mit ihren Kartenvorschauen, Kurzbefehle und Einblicke',
+    phone: 'Start von Kept auf einem Handy: die Kacheln unter „Braucht dich“ und die Kurzbefehle über der Tab-Leiste',
   },
 }[lang];
 ---
