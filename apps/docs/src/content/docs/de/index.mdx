@@ -1,9 +1,9 @@
 ---
-title: Selbst gehostete Haushaltsinventur
-description: "Open Source, selbst gehostet, für dein Homelab: wo die Dinge sind, was sie sind, was fällig ist. 3D-Karte, QR-Etiketten, Garantien, Handy-App auch offline."
+title: Haushaltsinventar, selbst gehostet
+description: "Open Source, selbst gehostet, für dein Homelab: wo die Dinge sind, was sie sind, was fällig ist. 3D-Raumplan, QR-Etiketten, Garantien, Handy-App auch offline."
 template: splash
 hero:
-  title: Deine Haushaltsinventur, selbst gehostet
+  title: Dein Haushaltsinventar, selbst gehostet
   tagline: Wo die Dinge sind. Was sie sind. Was fällig ist.
   actions:
     - text: Installieren
@@ -12,7 +12,7 @@ hero:
     - text: Kept ausprobieren
       link: /de/try/kept/
       variant: secondary
-    - text: Die Karte ausprobieren
+    - text: Den Raumplan ausprobieren
       link: /de/try/map/
       variant: secondary
     - text: GitHub
@@ -35,27 +35,27 @@ import clipMp4 from '../../../assets/clips/map-add-tv-short.mp4?url';
 import clipPoster from '../../../assets/clips/map-add-tv-short-poster.webp?url';
 import clipWebm from '../../../assets/clips/map-add-tv-short.webm?url';
 
-<Section title="Einen Fernseher auf die Karte stellen" id="map-clip" split>
+<Section title="Einen Fernseher in den Raumplan stellen" id="map-clip" split>
   <Fragment slot="lede">Wähl den Fernseher. Seine Form ergibt sich aus seinem Typ.</Fragment>
   <LoopClip
     light={{ webm: clipWebm, mp4: clipMp4, poster: clipPoster }}
     dark={{ webm: clipDarkWebm, mp4: clipDarkMp4, poster: clipDarkPoster }}
     width={960}
     height={514}
-    label="Einen Fernseher im Beispielhaushalt von Kept auf die Karte stellen: das Wohnzimmer, Anordnen, der Samsung-Fernseher aus der Liste, seine Karte mit „Form: Fernseher, aus seinem Typ“, dann Erledigt."
+    label="Einen Fernseher im Beispielhaushalt von Kept in den Raumplan stellen: das Wohnzimmer, Anordnen, der Samsung-Fernseher aus der Liste, sein Infofeld mit „Form: Fernseher, aus seinem Typ“, dann Erledigt."
     pause="Clip anhalten"
     play="Clip abspielen"
   />
 </Section>
 
-<Section eyebrow="Kept, geöffnet" title="Eine Inventur, auf dem Desktop und auf dem Handy" id="opened" split>
+<Section eyebrow="Kept im Einsatz" title="Ein Inventar, auf dem Desktop und auf dem Handy" id="opened" split>
   <Fragment slot="points">
     <li><span><strong>Start:</strong> was dich braucht, auf einen Blick.</span></li>
-    <li><span><strong>Standorte:</strong> Räume, Regale, Kisten. Zu jedem eine Karte.</span></li>
+    <li><span><strong>Standorte:</strong> Räume, Regale, Kisten. Zu jedem ein Raumplan.</span></li>
     <li><span><strong>Handy:</strong> erfassen, scannen, suchen. Auch offline.</span></li>
   </Fragment>
   <Opened
-    desktopAlt="Start von Kept auf einem Desktop: Erste Schritte, die Kacheln unter „Braucht dich“ von überfällig bis lange nicht gesehen, die Standorte mit ihren Kartenvorschauen, Kurzbefehle und Einblicke"
+    desktopAlt="Start von Kept auf einem Desktop: Erste Schritte, die Kacheln unter „Braucht dich“ von überfällig bis lange nicht gesehen, die Standorte mit der Vorschau ihres Raumplans, Kurzbefehle und Einblicke"
     phoneAlt="Start von Kept auf einem Handy: Erste Schritte, die Kacheln unter „Braucht dich“ und die Kurzbefehle, über der Tab-Leiste mit dem Knopf Erfassen"
   />
 </Section>
@@ -65,12 +65,12 @@ import clipWebm from '../../../assets/clips/map-add-tv-short.webm?url';
     compact
     heading="h3"
     items={[
-      { icon: 'map', title: '3D-Karte', body: 'Etagen, Räume, Möbel. Markierungen für das, was dich braucht.', href: '/de/users/location-map/' },
+      { icon: 'map', title: '3D-Raumplan', body: 'Etagen, Räume, Möbel. Markierungen für das, was dich braucht.', href: '/de/users/location-map/' },
       { icon: 'places', title: 'Räume und Kisten', body: 'Orte in Orten. Verschiebst du eine Kiste, wandert ihr Inhalt mit.', href: '/de/users/everyday-use/#locations-rooms-and-boxes' },
       { icon: 'qrcode', title: 'QR-Etiketten', body: 'Eine Kurz-ID auf allem. Kiste scannen, Inhalt sehen.', href: '/de/users/everyday-use/#short-ids-and-labels' },
       { icon: 'schedule', title: 'Garantien und Wartungen', body: 'Nach Datum oder Zählerstand. In der Reihenfolge, in der sie ablaufen.', href: '/de/users/everyday-use/#reminders-and-notifications' },
       { icon: 'phone', title: 'Handy-App, offline', body: 'Erfassen, scannen, suchen ohne Netz. Gleicht später ab.', href: '/de/users/phone-app/' },
-      { icon: 'insurance', title: 'Berichte für die Versicherung', body: 'Fotos, Seriennummern, Belege. Ein PDF und eine Schadensmappe.', href: '/de/users/everyday-use/#reports-the-inventory-insurance-and-claims' },
+      { icon: 'insurance', title: 'Berichte für die Versicherung', body: 'Fotos, Seriennummern, Belege. Ein PDF und ein Schadenspaket.', href: '/de/users/everyday-use/#reports-the-inventory-insurance-and-claims' },
       { icon: 'lending', title: 'Verleihen', body: 'An wen verliehen, bis wann. Wer leiht, braucht kein Konto.', href: '/de/users/lending/' },
       { icon: 'moving', title: 'Umzug', body: 'Nummerierte Kisten, im Transporter verfolgt, per Scan ausgepackt.', href: '/de/users/moving/' },
       { icon: 'tool', title: 'Sets und Übergaben', body: 'Eine Kiste mit allem darin verleihen. Jedes Teil kommt für sich zurück.', href: '/de/users/kits/' },
@@ -113,12 +113,12 @@ import clipWebm from '../../../assets/clips/map-add-tv-short.webm?url';
       { name: 'lending', title: 'Verleihen', caption: 'Was du verliehen hast, an wen. Was du geliehen hast. Was überfällig ist.', alt: 'Verleihen: eine Bohrmaschine, verliehen und zwei Tage überfällig, und eine geliehene Leiter' },
       { name: 'assistant', title: 'Assistent', caption: 'Frag, wo etwas ist. Die Antwort nennt, was sie gefunden hat; Änderungen warten auf dich.', alt: 'Der Assistent beantwortet, wo das HDMI-Kabel ist, nennt das Kabel und seine Kiste und schlägt eine Verschiebung zur Bestätigung vor' },
       { name: 'connections', title: 'Verbindungen', caption: 'Tokens für KI-Apps und Skripte, jedes auf die Standorte beschränkt, die du wählst. Webhooks.', alt: 'Einstellungen unter Verbindungen: zwei persönliche Tokens, eine verbundene App und die Webhooks' },
-      { name: 'track', title: 'Was erfasst wird', caption: 'Je Standort: das Wichtigste, Haushalt oder vollständig. Dann jedes Modul einzeln.', alt: 'Die Einstellung eines Standorts, was erfasst wird: die Vorlage Haushalt gewählt, mit ihren eingeschalteten Modulen' },
+      { name: 'track', title: 'Was erfasst wird', caption: 'Je Standort: Basis, Haushalt oder vollständig. Dann jedes Modul einzeln.', alt: 'Die Einstellung eines Standorts, was erfasst wird: die Vorlage Haushalt gewählt, mit ihren eingeschalteten Modulen' },
     ]}
   />
 </Section>
 
-<Section eyebrow="Du betreibst es" title="Open Source, in deinem Homelab, deine Daten" id="trust">
+<Section eyebrow="In deiner Hand" title="Open Source, in deinem Homelab, deine Daten" id="trust">
   <Cards
     compact
     heading="h3"

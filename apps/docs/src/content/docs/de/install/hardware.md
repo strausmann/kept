@@ -17,11 +17,11 @@ Dort lief alles durch, auch eine Sicherung während Foto-Uploads. Mit 2 GB bleib
   Kein Swap.
 - **Daten:** ein Haushalt, dazu ein Standort mit 3.000 Gegenständen in 206 Orten und 200 Behältern,
   und 300 echte Fotos.
-- **Last:** 20 Fotos mit 12 Megapixeln, zwei PDFs, 120-mal Karte und Graph dieses Standorts laden,
+- **Last:** 20 Fotos mit 12 Megapixeln, zwei PDFs, 120-mal Raumplan und Graph dieses Standorts laden,
   120 Listen- und Suchabrufe, `kept admin backup` während die Fotos hochladen, die geplante
   Sicherung, danach 10 Minuten Leerlauf.
 
-| Maschine | Fotos, Karte, Suche, PDFs | Sicherung während Uploads | Geplante Sicherung | Spitze |
+| Maschine | Fotos, Raumplan, Suche, PDFs | Sicherung während Uploads | Geplante Sicherung | Spitze |
 |---|---|---|---|---|
 | 1 GB, 2 Kerne (3 Läufe) | bestanden | bestanden | bestanden | 730–745 MB |
 | 1 GB, 1 Kern | bestanden | bestanden | bestanden | 740 MB |
@@ -35,7 +35,7 @@ und Docker startete ihn neu.
   verkleinert wurden, bleibt Kept bei etwa 300 MB.
 - **Echte Daten:** auf einem amd64-Heimserver Kept 206 MB und Postgres 119 MB (eine Messung).
 - **Geschwindigkeit** (Mediane): eine Listenseite 30–40 ms, eine Suche 50–70 ms, ein Foto-Upload
-  0,3–0,4 s, die Karte des Standorts mit 3.000 Gegenständen 0,4–0,5 s.
+  0,3–0,4 s, der Raumplan des Standorts mit 3.000 Gegenständen 0,4–0,5 s.
 - **Noch nicht getestet:** eine echte VM, amd64 in diesen Größen, 512 MB, lokale KI. Die
   Leistungstests gehen weiter: [#379](https://github.com/keptinventory/kept/issues/379).
 
@@ -62,10 +62,10 @@ Release wird auf einem Pi getestet.
   einem Container-Limit unter 3 GB verkleinert Kept eins nach dem anderen, sonst zwei gleichzeitig
   (`KEPT_IMAGE_CONCURRENCY` legt es fest). Der Speicher steigt über die ersten Fotos um etwa 150 MB
   und bleibt dort.
-- **Karte und Graph eines sehr großen Standorts.** Der Server liest bei jedem Laden den ganzen
+- **Raumplan und Graph eines sehr großen Standorts.** Der Server liest bei jedem Laden den ganzen
   Standort: etwa 670 KB für 3.000 Gegenstände.
-- **Nicht auf dem Server:** Karte, Graph und Raster zeichnet dein Browser, sie kosten im
-  Ruhezustand keinen Serverspeicher; Karte und Graph werden erst geladen, wenn du sie öffnest.
+- **Nicht auf dem Server:** Raumplan, Graph und Raster zeichnet dein Browser, sie kosten im
+  Ruhezustand keinen Serverspeicher; Raumplan und Graph werden erst geladen, wenn du sie öffnest.
 - **Lokale KI mit Ollama.** Ein Modell auf derselben Maschine teilt sich den Speicher mit Kept und
   braucht weit mehr als Kept selbst; siehe [Ollama](/de/admin/ollama/).
 - **Speicherplatz.** Die Datenbank ist klein, wachsen tun die Dateien. Lass Platz für Sicherungen

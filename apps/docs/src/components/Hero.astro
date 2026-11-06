@@ -28,11 +28,14 @@ import { withBase } from './landing/base';
 const { entry, lang } = Astro.locals.starlightRoute;
 const { title = entry.data.title, tagline, actions = [] } = entry.data.hero || {};
 const ar = lang === 'ar';
+const de = lang === 'de';
 
-const eyebrow = ar ? 'جديد · الخريطة ثلاثية الأبعاد' : 'New · The 3D map';
+const eyebrow = ar ? 'جديد · الخريطة ثلاثية الأبعاد' : de ? 'Neu · Der 3D-Raumplan' : 'New · The 3D map';
 const facts = ar
   ? ['AGPL-3.0', 'Docker أو Kubernetes', 'تطبيق هاتف بلا اتصال']
-  : ['AGPL-3.0', 'Docker or Kubernetes', 'Offline phone app'];
+  : de
+    ? ['AGPL-3.0', 'Docker oder Kubernetes', 'Handy-App, auch offline']
+    : ['AGPL-3.0', 'Docker or Kubernetes', 'Offline phone app'];
 const files = import.meta.glob<{ default: ImageMetadata }>('../assets/landing/map-hero*.webp', {
   eager: true,
 });
@@ -43,7 +46,9 @@ const dark = capture(arabic ? '-ar-dark' : '-dark');
 if (!light || !dark) throw new Error('missing src/assets/landing/map-hero-{light,dark}.webp');
 const mapAlt = ar
   ? 'خريطة Kept ثلاثية الأبعاد لمنزل: غرفه في منظر مائل، لكلٍّ منها اسمها، بأثاثها وصناديقها، بجانب شجرة أماكن الموقع'
-  : "Kept's 3D map of a home: its rooms in an isometric view, each labelled, with furniture and boxes, beside the location's tree of places";
+  : de
+    ? 'Der 3D-Raumplan eines Zuhauses in Kept: die Räume in isometrischer Ansicht, jeder beschriftet, mit Möbeln und Kisten, neben dem Ortsbaum des Standorts'
+    : "Kept's 3D map of a home: its rooms in an isometric view, each labelled, with furniture and boxes, beside the location's tree of places";
 const widths = [480, 720, 960, 1280, 1600];
 const sizes = '(min-width: 72rem) 36rem, (min-width: 50rem) 52vw, calc(100vw - 2rem)';
 const [lit, dim] = await Promise.all(
