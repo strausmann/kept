@@ -85,8 +85,13 @@ const baseLinks = defineMdastPlugin({
   },
 });
 
-/** A sidebar group with its Arabic label; the other locales show the English one. */
-const group = (label, ar, items, extra = {}) => ({ label, translations: { ar }, items, ...extra });
+/** A sidebar group with its labels per locale; a locale without one shows the English label. */
+const group = (label, translations, items, extra = {}) => ({
+  label,
+  translations,
+  items,
+  ...extra,
+});
 /** A page in the sidebar, under its own title. */
 const page = (slug) => slug;
 /** A group filled from a directory, in each page's `sidebar.order`. */
@@ -96,8 +101,8 @@ const dir = (directory) => [{ autogenerate: { directory } }];
 // on it, and people who maintain it. Pages keep their URLs (install/, admin/, reference/); the
 // sidebar groups them by who reads them.
 const sidebar = [
-  group('Use Kept', 'استخدام Kept', [
-    group('Install', 'التثبيت', dir('install')),
+  group('Use Kept', { ar: 'استخدام Kept', de: 'Kept nutzen' }, [
+    group('Install', { ar: 'التثبيت', de: 'Installieren' }, dir('install')),
     page('users/getting-started'),
     page('users/features'),
     page('users/first-run'),
@@ -137,17 +142,21 @@ const sidebar = [
     page('users/reports'),
     page('users/webhooks'),
     page('integrations'),
-    group('Backups and restore', 'النسخ الاحتياطي والاستعادة', [
-      page('admin/backups'),
-      page('admin/restore'),
-      page('admin/read-with-restic'),
-      page('admin/move-server'),
-    ]),
+    group(
+      'Backups and restore',
+      { ar: 'النسخ الاحتياطي والاستعادة', de: 'Sicherung und Wiederherstellung' },
+      [
+        page('admin/backups'),
+        page('admin/restore'),
+        page('admin/read-with-restic'),
+        page('admin/move-server'),
+      ],
+    ),
     page('users/troubleshooting'),
     page('users/faq'),
     page('users/glossary'),
   ]),
-  group('Run Kept', 'تشغيل Kept', [
+  group('Run Kept', { ar: 'تشغيل Kept', de: 'Kept betreiben' }, [
     page('reference/configuration'),
     page('admin/upgrades'),
     page('admin/verify-release'),
@@ -161,7 +170,7 @@ const sidebar = [
     page('admin/troubleshooting'),
     page('admin/uninstall'),
   ]),
-  group('Build on Kept', 'التطوير', [
+  group('Build on Kept', { ar: 'التطوير', de: 'Mit Kept entwickeln' }, [
     page('developers/contributing'),
     page('developers/architecture'),
     page('developers/monorepo'),
@@ -181,7 +190,7 @@ const sidebar = [
     page('developers/testing'),
     page('developers/feature-walkthrough'),
   ]),
-  group('Maintain Kept', 'صيانة المشروع', [
+  group('Maintain Kept', { ar: 'صيانة المشروع', de: 'Das Projekt pflegen' }, [
     page('maintainers/releasing'),
     page('maintainers/signing'),
     page('maintainers/changelog'),
