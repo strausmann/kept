@@ -1,194 +1,217 @@
 ---
 title: Deine ersten Minuten
-description: Richte mit dem Einrichtungscode ein neues Kept ein, erstelle dein erstes Zuhause, füge Gegenstände hinzu, lade jemanden ein und wähle Sprache und Design.
+description: Eine neue Kept-Instanz mit dem Einrichtungscode übernehmen, das erste Zuhause erstellen, Gegenstände hinzufügen, Leute einladen und Sprache und Design wählen.
 ---
 
-Diese Seite beginnt, sobald Kept läuft und du die Adresse öffnen kannst. Die Installation ist hier beschrieben:
-[Installation mit Docker Compose](/de/install/compose/).
+Diese Seite beginnt, sobald Kept läuft und du seine Adresse öffnen kannst. Die Installation steht
+unter [Mit Docker Compose installieren](/de/install/compose/).
 
-## 1. Server mit dem Einrichtungscode beanspruchen
+## 1. Den Server mit dem Einrichtungscode übernehmen
 
-Wenn Kept zum ersten Mal ohne Admin startet, gibt es einen einmaligen Einrichtungscode in den Logs aus, als
-`KEPT SETUP CODE: K7Q-2M9`. Die Adresse von Kept zu öffnen führt dich zu **Diese Kept-Instanz einrichten**, in drei Schritten:
+Startet Kept zum ersten Mal ohne Admin, schreibt es einen einmaligen Einrichtungscode in sein Log,
+etwa `KEPT SETUP CODE: K7Q-2M9`. Die Adresse von Kept führt dich zu **Diese Kept-Instanz
+einrichten**, drei Schritte:
 
-1. **Einrichtungscode.** Gib die sechs Zeichen ein. Der Bindestrich ist optional und Groß- und Kleinschreibung spielt keine Rolle. Der Code
-   funktioniert nicht mehr, sobald er verwendet wurde. Logs verloren? `kept admin setup-code` stellt einen neuen aus
-   ([so geht's unter Compose](/de/install/compose/#3-einrichtung-abschließen)).
-2. **Erstes Konto.** Dein Name, deine E-Mail-Adresse und ein Passwort mit mindestens 8 Zeichen. Dieses Konto ist der
-   **Instanzadministrator**: es betreibt den Server (Benutzer, Registrierung, Backups). Es kann nicht in jemandes
-   Zuhause sehen, es sei denn, es wird eingeladen.
-3. **Instanzoptionen.** Ein Schalter: **Jedem mit der Adresse erlauben, ein Konto zu erstellen**. Lass ihn für einen Haushalt
-   aus: Leute treten über eine Einladung bei, oder du fügst sie hinzu. Du kannst ihn später in
-   Einstellungen → Admin ändern.
+1. **Einrichtungscode.** Gib die sechs Zeichen ein. Der Bindestrich ist optional, Groß- und
+   Kleinschreibung egal. Nach der Verwendung ist der Code ungültig. Log verloren?
+   `kept admin setup-code` stellt einen neuen aus
+   ([so geht es unter Compose](/de/install/compose/#3-einrichtung-abschließen)).
+2. **Erstes Konto.** Dein Name, deine E-Mail-Adresse und ein Passwort mit mindestens 8 Zeichen.
+   Dieses Konto ist der **Instanz-Admin**: Er betreibt den Server (Benutzer, Registrierung,
+   Sicherungen). In das Zuhause anderer sieht er nicht, solange sie ihn nicht einladen.
+3. **Instanzoptionen.** Ein Schalter: **Jedem mit der Adresse erlauben, ein Konto zu erstellen**.
+   Für einen Haushalt bleibt er aus: Leute kommen über eine Einladung dazu, oder du legst sie an.
+   Du kannst das später unter Einstellungen → Admin ändern.
 
-**Einrichtung abschließen** bringt dich zu Home.
+**Einrichtung abschließen** bringt dich zur Startseite.
 
-:::caution[Finish it straight away]
-Bis die Einrichtung abgeschlossen ist, könnte jeder, der die Adresse öffnen kann, versuchen, den Server zu beanspruchen.
+:::caution[Sofort abschließen]
+Solange die Einrichtung nicht abgeschlossen ist, kann jeder, der die Adresse öffnen kann,
+versuchen, den Server zu übernehmen.
 :::
 
-KI und das Nachschlagen von Barcodes sind nicht Teil der Einrichtung. Kept funktioniert ohne sie, und du kannst die KI später verbinden
-([KI-Anbieter](/de/users/ai-providers/)).
+KI und Barcode-Suche gehören nicht zur Einrichtung. Kept funktioniert ohne sie, und KI kannst du
+später verbinden ([KI-Anbieter](/de/users/ai-providers/)).
 
-## 2. Lies die Checkliste „Erste Schritte“ auf Home
+## 2. Die Checkliste „Erste Schritte“ auf der Startseite
 
-Home öffnet mit **Erste Schritte**, einer Zeile mit deinem Fortschritt und dem nächsten Schritt, ausgerechnet aus dem, was du
-wirklich gemacht hast, sodass Schritte sich selbst abhaken. Der Pfeil öffnet die Schritte:
+Die Startseite beginnt mit **Erste Schritte**: eine Zeile mit deinem Fortschritt und dem nächsten
+Schritt. Kept ermittelt sie aus dem, was du wirklich getan hast, also haken sich die Schritte von
+selbst ab. Der Pfeil klappt die Schritte auf:
 
-| Schritt | Was es fragt |
+| Schritt | Was er verlangt |
 |---|---|
-| **Kept auf HTTPS umstellen** | Wird dem Instanzadministrator angezeigt, solange Kept über einfaches HTTP ausgeliefert wird. Telefone blockieren die Kamera, das Installieren von Kept, Push-Benachrichtigungen und Standort über HTTP. Siehe [HTTPS](/de/install/https/). |
-| **Dein erstes Zuhause erstellen** | Ein Standort, weiter unten. |
-| **3 Gegenstände hinzufügen** | Ein paar, die du auf keinen Fall aus den Augen verlieren willst. |
-| **Drucke dein erstes Etikett** | Wenn Etiketten in einem Standort aktiv ist. |
-| **Jemanden einladen** | Ein Link oder ein QR-Code; niemand braucht eine E-Mail. |
-| **KI-Anbieter verbinden** | Wird eingeladenen Mitgliedern nicht angezeigt oder in einem Standort mit dem Basis-Preset. |
-| **Auf dem Handy installieren** | Hakt sich selbst ab, wenn du Kept zum ersten Mal über das Symbol auf dem Startbildschirm öffnest. |
+| **Kept auf HTTPS umstellen** | Erscheint beim Instanz-Admin, solange Kept über einfaches HTTP läuft. Handys sperren über HTTP die Kamera, das Installieren von Kept, Push-Benachrichtigungen und den Standort. Siehe [HTTPS](/de/install/https/). |
+| **Dein erstes Zuhause erstellen** | Ein Standort, siehe unten. |
+| **3 Gegenstände hinzufügen** | Ein paar, die du ungern aus den Augen verlieren würdest. |
+| **Drucke dein erstes Etikett** | Wenn in einem Standort Etiketten eingeschaltet sind. |
+| **Jemanden einladen** | Ein Link oder ein QR-Code; niemand braucht eine E-Mail-Adresse. |
+| **KI-Anbieter verbinden** | Erscheint nicht bei eingeladenen Mitgliedern und nicht in einem Standort mit der Vorlage Basis. |
+| **Auf dem Handy installieren** | Hakt sich ab, wenn du Kept zum ersten Mal über sein Symbol auf dem Startbildschirm öffnest. |
 
-**×** blendet sie dauerhaft aus; **Hilfe → Checkliste „Erste Schritte“ → Wieder anzeigen** zeigt sie wieder an. Sie verschwindet von selbst, wenn jeder Schritt erledigt ist. Mehr zu Home in [alltäglicher Nutzung](/de/users/everyday-use/#startseite).
+**×** blendet die Checkliste dauerhaft aus; **Hilfe → Checkliste „Erste Schritte“ → Wieder
+anzeigen** holt sie zurück. Sind alle Schritte erledigt, verschwindet sie von selbst. Mehr zur
+Startseite unter [Alltag mit Kept](/de/users/everyday-use/#home).
 
-## 3. Erstelle dein erstes Zuhause
+## 3. Dein erstes Zuhause erstellen
 
-Jeder hat von Anfang an den Standort **Persönlich**: er gehört dir allein (keine Mitglieder, Einladungen oder
-Teilen-Links) und dort landet eine Erfassung ohne Standort. Benenne ihn unter **Standorteinstellungen →
-Allgemein** um, und Kept zeigt den neuen Namen überall. Sobald du einen weiteren Standort hast, kannst du ihn
-[verbergen](/de/users/locations/#persönlich-ausblenden) unter **Einstellungen → Profil → Deine Standorte**. Gemeinsame Gegenstände gehören in
-einen eigenen Standort. Wähle **Dein erstes Zuhause erstellen** (oder **Neuer Standort** auf Home):
+Jeder hat von Anfang an einen Standort **Persönlich**: Er gehört nur dir (keine Mitglieder,
+Einladungen oder Freigabelinks), und dort landet alles, was du ohne Standort erfasst. Umbenennen
+kannst du ihn unter **Standorteinstellungen → Allgemein**, dann zeigt Kept überall den neuen
+Namen. Sobald du einen weiteren Standort hast, kannst du ihn unter **Einstellungen → Profil → Deine
+Standorte** [ausblenden](/de/users/locations/#hide-personal). Was ihr gemeinsam nutzt, gehört in
+einen eigenen Standort. Wähle **Dein erstes Zuhause erstellen** (oder **Neuer Standort** auf der
+Startseite):
 
-1. **Wie heißt dieser Standort?** Ein Name, wie Home oder Garage, und seine Art: Haus, Wohnung,
-   Garage, Lagereinheit, Büro, Ferienhaus oder Sonstiges.
-2. **Räume.** Die Vorlage der Art füllt Räume und Plätze; umbenennen, entfernen oder **Raum oder Platz hinzufügen**.
-   Jeder Standort hat auch **Ohne Ort** für Gegenstände, die noch keinen Platz haben. **Überspringen** behält nur
-   Ohne Ort.
-3. **Was erfasst wird.** Drei Voreinstellungen:
-   - **Basis**: Gegenstände finden: Räume, Boxen, Etiketten und Suche.
-   - **Haushalt**: ergänzt Quittungen und Garantien, Erinnerungen, Ausleihen, Unterlagen und Fahrzeuge.
-   - **Erledigen**: ergänzt Kraftstoff, Gegenstände, die zur Neige gehen, Passwörter und Codes, Umzug und
-     "ChatGPT oder Claude verbinden".
+1. **Wie heißt dieser Standort?** Ein Name, etwa Zuhause oder Garage, und seine Art: Haus, Wohnung,
+   Garage, Lagerabteil, Büro, Ferienhaus oder Sonstiges.
+2. **Räume.** Die Vorlage der Art füllt Räume und Plätze vor; umbenennen, entfernen oder **Raum
+   oder Platz hinzufügen**. Jeder Standort hat außerdem **Ohne Ort**, für Gegenstände, die noch
+   keinen Platz haben. **Überspringen** behält nur Ohne Ort.
+3. **Was erfasst wird.** Drei Vorlagen:
+   - **Basis**: Dinge finden: Räume, Kisten, Etiketten und Suche.
+   - **Haushalt**: dazu Belege und Garantien, Erinnerungen, Verleihen, Unterlagen und Fahrzeuge.
+   - **Vollständig**: dazu Tanken, Was zur Neige geht, Passwörter und Codes, Umzug und „ChatGPT
+     oder Claude verbinden“.
 
-Zeitzone und Währung kommen aus deinem Browser. Ändere sie und schalte einzelne Module ein oder aus in den
-Standorteinstellungen des Standorts (**Allgemein** und **Was erfasst wird**). Ein Modul auszuschalten
-blendet es aus; nichts wird gelöscht.
+Zeitzone und Währung kommen aus deinem Browser. Ändern, und einzelne Module ein- oder ausschalten,
+kannst du in den **Standorteinstellungen** des Standorts (**Allgemein** und **Was erfasst wird**).
+Ein ausgeschaltetes Modul wird nur ausgeblendet; gelöscht wird nichts.
 
-## 4. Füge deinen ersten Gegenstand hinzu
+## 4. Den ersten Gegenstand hinzufügen
 
-Der schnellste Weg ist **Erfassen**, der mittlere Tab auf dem Handy: richte die Kamera aus, drücke den Auslöser, und
-der Gegenstand wird dort gespeichert, wo der Ortschip oben steht. Ein Name ist beim Erfassen optional:
-mit einem verbundenen KI-Anbieter benennt Kept ihn anhand des Fotos; ohne einen warten unbenannte Gegenstände im
-**Eingang** auf einen Namen. Auf einem Computer fügt **Hier hinzufügen** auf einem Raum oder einer Box über ein Formular einen Gegenstand hinzu.
-[Alltägliche Nutzung](/de/users/everyday-use/) deckt Erfassen, Etiketten und den Rest ab.
+Am schnellsten geht es mit **Erfassen**, dem mittleren Reiter auf dem Handy: Kamera ausrichten,
+auslösen, und der Gegenstand ist dort gespeichert, wo der Ort oben steht. Einen Namen brauchst du
+beim Erfassen nicht: Mit einem verbundenen KI-Anbieter benennt Kept ihn anhand des Fotos; ohne
+warten unbenannte Gegenstände im **Eingang** auf einen Namen. Am Computer fügt **Hier
+hinzufügen** in einem Raum oder einer Kiste einen Gegenstand über ein Formular hinzu.
+[Alltag mit Kept](/de/users/everyday-use/) behandelt Erfassen, Etiketten und den Rest.
 
 ## 5. Leute einladen
 
-Teilen geschieht pro Standort: jemand, den du zu Home einlädst, sieht Home und sonst nichts von dir.
-Nachdem du einen Standort erstellt hast, zeigt Home eine **Leute zu … einladen**-Karte; dieselbe Seite ist unter
-**Standorteinstellungen → Mitglieder → Einladen**.
+Geteilt wird pro Standort: Wen du zu Zuhause einlädst, der sieht Zuhause und sonst nichts von dir.
+Nachdem du einen Standort erstellt hast, zeigt die Startseite eine Karte **Leute zu … einladen**;
+dieselbe Seite liegt unter **Standorteinstellungen → Mitglieder → Einladen**.
 
-1. Wähle die **Rolle** und unter **Zugriff** **Kein Enddatum** oder **Bis zu einem Datum**. Ihr Zugriff und
-   alle Token, die sie erstellen, enden an diesem Datum.
-2. **Einladungslink erstellen.** Du erhältst den Link mit **Link kopieren** und einen QR-Code zum Scannen mit ihrem
-   Handy. Der Link funktioniert einmalig, 7 Tage lang, und wird unter Mitglieder als ausstehende Einladung angezeigt, bis er
-   verwendet wurde; dort kannst du ihn widerrufen.
-3. **Per E-Mail senden** funktioniert nur, wenn der Server E-Mail eingerichtet hat (`KEPT_SMTP_URL`).
+1. Wähle die **Rolle** und unter **Zugriff** **Kein Enddatum** oder **Bis zu einem Datum**. Ihr
+   Zugriff, und alle Tokens, die sie anlegen, enden an diesem Datum.
+2. **Einladungslink erstellen.** Du bekommst den Link mit **Link kopieren** und einen QR-Code, um
+   ihn **Mit ihrem Telefon scannen** zu lassen. Der Link funktioniert einmal, 7 Tage lang, und
+   steht bis zur Verwendung als offene Einladung unter Mitglieder, wo du ihn zurückziehen kannst.
+3. **Per E-Mail senden** funktioniert nur, wenn auf dem Server E-Mail eingerichtet ist
+   (`KEPT_SMTP_URL`).
+
+Die eingeladene Person öffnet den Link und tritt mit ihrem Konto bei oder legt eines an; solange
+die Registrierung geschlossen ist, ist die Einladung der einzige Weg zu einem Konto.
 
 ### Die Rollen
 
-| Rolle | Was sie in diesem Standort können |
+| Rolle | Was sie in diesem Standort darf |
 |---|---|
-| **Eigentümer** | Alles, einschließlich Zwei-Faktor-Regeln, Übertragung und Löschung. Es gibt einen Eigentümer. |
-| **Admin** | Mitglieder und Betrachter einladen und entfernen, Einstellungen und Module, Import und Export, Teilen-Links und Claim-Packs, dauerhaft löschen. Nur der Eigentümer erteilt oder entfernt Admins. |
-| **Mitglied** | Gegenstände hinzufügen, bearbeiten, verschieben, ausleihen und in den Papierkorb legen; Messwerte und Serviceeinträge protokollieren; Etiketten drucken; KI-Erfassung nutzen. Geld ist sichtbar. |
-| **Betrachter** | Nur anschauen und suchen. Geld ist verborgen, es sei denn, der Standort erlaubt Betrachtern, es zu sehen; der Assistent antwortet, kann aber nichts ändern. |
+| **Eigentümer** | Alles, auch Zwei-Faktor-Regeln, Übertragen und Löschen. Es gibt einen Eigentümer. |
+| **Admin** | Mitglieder und Betrachter einladen und entfernen, Einstellungen und Module, Import und Export, Freigabelinks und Schadenspakete, endgültig löschen. Nur der Eigentümer ernennt oder entfernt Admins. |
+| **Mitglied** | Gegenstände hinzufügen, bearbeiten, verschieben, verleihen und in den Papierkorb legen; Ablesungen und Wartungen eintragen; Etiketten drucken; mit KI erfassen. Geldbeträge sind sichtbar. |
+| **Betrachter** | Nur ansehen und suchen. Geldbeträge sind verborgen, wenn der Standort sie Betrachtern nicht erlaubt; der Assistent antwortet, kann aber nichts ändern. |
 
-Die vollständige Matrix ist `MATRIX` in
+Die vollständige Übersicht ist `MATRIX` in
 [`packages/shared/src/roles.ts`](https://github.com/keptinventory/kept/blob/main/packages/shared/src/roles.ts).
 
 ### Personen ohne E-Mail
 
-Für ein Kind oder ein Elternteil ohne E-Mail verwendet ein Eigentümer oder Admin **Person ohne E-Mail hinzufügen** auf der
-Mitglieder-Seite. Kept erstellt ein **verwaltetes Konto** mit einem Benutzernamen und zeigt einen Einmalcode (er funktioniert
-einmalig, für 30 Minuten). Die Person meldet sich mit **Ich habe einen Einmalcode**, ihrem Benutzernamen und dem
-Code an und wählt ihr eigenes Passwort; du siehst es nie. Wer das Konto erstellt hat (solange er dort noch
-Eigentümer oder Admin ist) oder der Eigentümer dieses Standorts können später einen neuen Code ausstellen, der das
-Konto überall abmeldet. Die Person kann eine E-Mail hinzufügen, um das Konto zu übernehmen. Ein verwaltetes Konto kann keinen Standort besitzen, und ein Standort
-nimmt höchstens 20 davon auf.
+Für ein Kind oder ein Elternteil ohne E-Mail nutzt ein Eigentümer oder Admin auf der Seite
+Mitglieder **Person ohne E-Mail hinzufügen**. Kept legt ein **verwaltetes Konto** mit einem
+Benutzernamen an und zeigt einen Einmalcode (er funktioniert einmal, 30 Minuten lang). Die Person
+meldet sich mit **Ich habe einen Einmalcode**, ihrem Benutzernamen und dem Code an und wählt ihr
+eigenes Passwort; du siehst es nie. Wer das Konto angelegt hat (solange er dort noch Eigentümer
+oder Admin ist), oder der Eigentümer dieses Standorts, kann später einen neuen Code ausstellen; das
+meldet das Konto überall ab. Die Person kann eine E-Mail-Adresse hinzufügen und das Konto damit
+selbst übernehmen. Ein verwaltetes Konto kann keinen Standort besitzen, und ein Standort hat
+höchstens 20 davon.
 
 ## 6. Sprache und Design
 
-**Einstellungen → Profil → Anzeige** enthält die Anzeigeoptionen des Geräts, die angewendet werden, bevor die Seite gezeichnet wird:
+**Einstellungen → Profil → Anzeige** enthält die Anzeigeeinstellungen des Geräts. Sie gelten,
+bevor die Seite gezeichnet wird:
 
 - **Sprache**: English, العربية, Français, Deutsch, Italiano, Tiếng Việt, Українська oder Español.
-  Öffne die Liste oder tippe, um eine zu finden: ihren eigenen Namen, ihren Namen auf Englisch oder in der Sprache, die du
-  verwendest, und kleine Tippfehler sind in Ordnung (`german`, `deutsch` und `francais` funktionieren alle). Arabisch legt die ganze App von rechts
-  nach links aus. Die Anmeldeseiten haben denselben Auswähler.
-- **Ziffern auf Arabisch**: Westlich (0123) oder Östlich (٠١٢٣), nur angezeigt, während die Sprache Arabisch ist.
-  Kurze IDs und Seriennummern bleiben immer bei westlichen Ziffern.
-- **Region**: **Vereinigte Staaten** (Oct 29) oder **Vereinigtes Königreich** (29 Oct, 29/10/2026), nur angezeigt, während die Sprache
-  Englisch ist.
-- **Datumsformat**: **Standard** (29 Oct, mit dem Jahr nur für andere Jahre), 29 Oct 2026,
-  29/10/2026 oder 2026-10-29 (so, wie das Vereinigte Königreich sie schreibt). Jede Wahl zeigt das heutige Datum
-  auf diese Weise, in deiner Region. Kauf- und
-  Garantiedaten zeigen immer das Jahr.
-- **Design**: **System** (folgt der hellen oder dunklen Einstellung des Geräts), **Hell** oder **Dunkel**.
-- **Inhaltsbreite**: **Zentriert** oder **Volle Breite**, auf Bildschirmen 768 px und breiter.
+  Klapp die Liste auf oder tipp, um eine zu finden: ihren eigenen Namen, ihren englischen Namen oder ihren
+  Namen in der Sprache, die du gerade nutzt; kleine Tippfehler sind kein Problem (`german`,
+  `deutsch` und `francais` funktionieren alle). Arabisch stellt die ganze App von rechts nach links
+  dar. Die Anmeldeseiten haben dieselbe Auswahl.
+- **Ziffern auf Arabisch**: westlich (0123) oder östlich (٠١٢٣), nur sichtbar, solange die Sprache
+  Arabisch ist. Kurz-IDs und Seriennummern bleiben immer in westlichen Ziffern.
+- **Region**: **United States** (Oct 29) oder **United Kingdom** (29 Oct, 29/10/2026), nur sichtbar,
+  solange die Sprache Englisch ist.
+- **Datumsformat**: **Standard** (29. Okt., mit Jahr nur bei anderen Jahren), 29. Okt. 2026,
+  29.10.2026 oder 2026-10-29. Jede Auswahl zeigt das heutige Datum in dieser Schreibweise, in der
+  Schreibweise deiner Sprache und Region. Kauf- und Garantiedaten zeigen immer das Jahr.
+- **Design**: **System** (folgt der hellen oder dunklen Einstellung des Geräts), **Hell** oder
+  **Dunkel**.
+- **Inhaltsbreite**: **Zentriert** oder **Volle Breite**, auf Bildschirmen ab 768 px Breite.
 
-## 7. Eine Tour machen
+## 7. Die Tour
 
-**Hilfe → Die Tour** führt dich durch Kept auf den echten Bildschirmen, in kurzen Kapiteln mit drei bis sechs
-Schritten:
+**Hilfe → Die Tour** führt dich auf den echten Bildschirmen durch Kept, in kurzen Kapiteln mit
+jeweils drei bis sechs Schritten:
 
 | Kapitel | Was es zeigt |
 |---|---|
-| Grundlagen | Home, deine Standorte, Scan, Suche und wo alles andere ist |
-| Gegenstände & Plätze | zu einem Standort hinzufügen, was darin ist, und die Seite eines Gegenstands sowie ihre Tabs |
-| Graph & 3D-Karte | die Liste · Raster · Graph · Tabelle · Karte umschalten (Tabelle am Computer), der Graph in 2D oder 3D, 3D oder Grundriss, Pins, Etagen und Anordnen, wo ein Raum sich mit dem mitbewegt, was darin ist |
-| Erfassen & Eingang | auswählen, was du erfasst, den Auslöser und das Überprüfen dessen, was Kept gelesen hat |
-| Scannen | eine Scan-Sitzung: zählen, packen oder verschieben, wo, und was Beenden ändert |
-| Suche & Etiketten | das Suchfeld, gespeicherte Ansichten, Auswählen (verschieben, Etiketten drucken, In den Papierkorb verschieben), Etiketten drucken und Scannen, womit du ein leeres Etikett auf einen Ort, den du hast, setzen kannst |
-| Umzug | einen Umzug starten, seine Boxen und wo sie sind |
-| Ausleihen | was ausgeliehen ist, Zurückgegeben markieren und Ausleihen an einem Gegenstand |
-| Zeitpläne & Erinnerungen | ein neuer Zeitplan, was fällig ist, Erledigen und wie Erinnerungen dich erreichen |
-| Unterlagen & Garantien | die Unterlagenbibliothek, was abläuft, eine Datei hinzufügen, Schadensfälle |
-| Fahrzeuge & Kraftstoff | die Fahrzeugliste, das Protokollieren eines Messwerts oder einer Wartung, die Wartungen, die du öffnen kannst, und Kraftstoff |
-| Import & Export | woher ein Import kommt, die Datei und das Exportieren |
+| Grundlagen | Die Startseite, deine Standorte, Scannen, Suche, und wo alles andere liegt |
+| Gegenstände & Orte | Etwas zu einem Standort hinzufügen, was darin ist, und die Seite eines Gegenstands mit ihren Reitern |
+| Graph & 3D-Karte | Der Umschalter Liste · Raster · Graph · Tabelle · Karte (Tabelle am Computer), der Graph in 2D oder 3D, 3D oder Grundriss, Markierungen, Etagen und Anordnen, wobei ein Raum mit seinem Inhalt umzieht |
+| Erfassen & Eingang | Auswählen, was du erfasst, der Auslöser, und prüfen, was Kept erkannt hat |
+| Scannen | Eine Scan-Sitzung: zählen, packen oder verschieben, wo, und was Fertig ändert |
+| Suche & Etiketten | Das Suchfeld, gespeicherte Ansichten, Auswählen (verschieben, Etiketten drucken, In den Papierkorb), Etiketten drucken und Scannen, das ein leeres Etikett einem vorhandenen Ort zuordnen kann |
+| Umzug | Einen Umzug beginnen, seine Kisten, und wo sie gerade sind |
+| Verleihen | Was verliehen ist, Als zurückgegeben markieren, und Verleihen an einem Gegenstand |
+| Zeitpläne & Erinnerungen | Ein neuer Zeitplan, was fällig ist, Erledigen, und wie Erinnerungen dich erreichen |
+| Unterlagen & Garantien | Die Unterlagen-Bibliothek, was abläuft, eine Datei hinzufügen, Schadensfälle |
+| Fahrzeuge & Tanken | Die Fahrzeugliste, eine Ablesung oder Wartung eintragen, die Wartungen, die du öffnen kannst, und Tanken |
+| Import & Export | Woher ein Import kommt, die Datei, und Exportieren |
 | Einstellungen & Teilen | Benachrichtigungen, deine Standorte, Leute einladen, was erfasst wird |
 
-Nur die Kapitel, die du hast, sind aufgelistet: Ein Kapitel eines Moduls wird angezeigt, solange es in einem deiner
-Standorte eingeschaltet ist, und ein Betrachter bekommt keine Schritte, die etwas ändern.
+Aufgeführt sind nur die Kapitel, die du hast: Das Kapitel eines Moduls erscheint, solange das Modul
+in einem deiner Standorte eingeschaltet ist, und ein Betrachter bekommt keine Schritte, die etwas
+ändern.
 
-- **Oben:** wie viele Kapitel erledigt sind, mit einem dünnen Balken, und **Tour starten**. Sobald einige erledigt sind, steht dort **Tour fortsetzen** und es geht mit dem ersten Kapitel weiter, das du noch nicht abgeschlossen hast.
-- **Darunter:** eine kurze Zeile pro Kapitel mit Nummer und Schritten. Tippe auf eine Zeile, um die Tour mit
-  diesem Kapitel zu starten. Erledigte Kapitel klappen unter **Erledigt (N)** weg; öffne es, um eines wiederzugeben.
-- Die Tour startet aus der Hilfe. Die obere Leiste einer Seite behält ihre eigenen Werkzeuge; das **Sitzung starten** einer
-  Scan-Sitzung hat ein kleines **Zeig es mir** für sein Kapitel.
-- Das Popover zeigt, wo du bist: "Kapitel 3 von 12 · Schritt 2 von 5".
-- **Weiter** geht voran, **Zurück** geht im Kapitel zurück, die Pfeiltasten machen beides, und **Esc**
-  oder **×** schließt es.
-- Ein letzter Schritt eines Kapitels nennt das nächste: **Weiter** führt direkt hinein, **Hier aufhören**
-  beendet die Tour dort. Das letzte Kapitel endet mit **Erledigt**.
-- Die Seite funktioniert noch, während die Tour läuft: tippe außerhalb der Hervorhebung. Irgendwohin zu gehen,
-  das die Tour nicht geöffnet hat, schließt sie.
-- Ein abgeschlossenes Kapitel sagt **Erledigt** auf Hilfe, auf jedem Gerät. Ein Kapitel, das du auf halbem Weg schließt, startet
-  beim nächsten Mal mit seinem ersten Schritt.
-- Ein Kapitel, das etwas zum Zeigen braucht und nichts findet, erstellt ein eindeutig benanntes Muster, wie
-  "Sample: Cordless drill". Wenn die Tour endet, wählst du, ob du es behalten oder verwerfen willst; es berührt nie,
-  was du schon hast.
+- Oben: wie viele Kapitel erledigt sind, mit einem dünnen Balken, und **Tour starten**. Sind schon
+  welche erledigt, heißt es **Tour fortsetzen** und setzt beim ersten Kapitel an, das du noch nicht
+  abgeschlossen hast.
+- Darunter eine kurze Zeile pro Kapitel: seine Nummer und seine Schritte. Tipp auf eine Zeile, um
+  die Tour bei diesem Kapitel zu beginnen. Erledigte Kapitel klappen unter **Erledigt (N)** weg;
+  klapp es auf, um eines noch einmal anzusehen.
+- Die Tour startet über die Hilfe. Die obere Leiste einer Seite zeigt nur die Funktionen dieser
+  Seite; **Sitzung starten** in einer Scan-Sitzung hat ein kleines **Zeig es mir** für ihr Kapitel.
+- Das Popover zeigt, wo du bist: „Kapitel 3 von 12 · Schritt 2 von 5“.
+- **Weiter** geht vor, **Zurück** innerhalb des Kapitels zurück, die Pfeiltasten tun beides, und
+  **Esc** oder **×** schließt die Tour.
+- Der letzte Schritt eines Kapitels nennt das nächste: **Weiter** geht direkt hinein, **Hier
+  aufhören** beendet die Tour an dieser Stelle. Das letzte Kapitel endet mit **Fertig**.
+- Die Seite funktioniert weiter, während die Tour läuft: Tipp auf alles außerhalb der Hervorhebung.
+  Gehst du an eine Stelle, die die Tour nicht geöffnet hat, schließt sie sich.
+- Ein abgeschlossenes Kapitel steht in der Hilfe als **Fertig**, auf jedem Gerät. Ein Kapitel, das
+  du mittendrin schließt, beginnt beim nächsten Mal mit seinem ersten Schritt.
+- Braucht ein Kapitel etwas zum Zeigen und findet nichts, legt es ein deutlich benanntes Beispiel
+  an, etwa „Beispiel: Akkuschrauber“. Am Ende der Tour entscheidest du, ob du es behältst oder
+  verwirfst; was du schon hast, rührt sie nie an.
 - Die Tour startet nie von selbst.
 
-Ein paar einmalige Hinweise erscheinen auch beim ersten Mal, wenn du Erfassen, Scannen, die vorgeschlagenen Werte des Eingangs
-oder Etiketten verwendest.
+Ein paar einmalige Hinweise erscheinen außerdem, wenn du Erfassen, Scannen, die vorgeschlagenen
+Werte im Eingang oder Etiketten zum ersten Mal benutzt.
 
-Nach dem Aktualisieren von Kept zeigt **Neu in Kept** die Highlights dieser Version, einmal pro Version
-für jede Person, auf jedem Gerät: eins pro Slide, mit einem Bild oder einem kurzen Clip, seinem Titel und einer
-Zeile. **Weiter** und **Zurück**, die Punkte, die Pfeiltasten oder ein Wischen bewegen zwischen ihnen; das **Verstanden**
-der letzten Slide legt es weg, und **Hilfe → Was ist neu** zeigt es wieder an. Clips spielen stumm und
-können pausiert werden; wenn reduzierte Bewegung eingeschaltet ist, bleiben sie unbewegt, bis du auf **Abspielen** drückst. Offline
-zeigt ein Slide anstelle seines Bildes das Symbol seines Abschnitts. Es wird nie auf einem neuen Konto oder über
-Erfassen oder Scannen angezeigt. Die Highlights sind in jeder Sprache auf Englisch, mit einem Link zu den vollständigen Release-Notes
+Nach einem Update von Kept zeigt **Neu in Kept** die Höhepunkte dieser Version, einmal pro Version
+und Person, auf jedem Gerät: einer pro Folie, mit einem Bild oder einem kurzen Clip, einem Titel
+und einer Zeile. **Weiter** und **Zurück**, die Punkte, die Pfeiltasten oder ein Wischen wechseln
+zwischen ihnen; **Verstanden** auf der letzten Folie schließt sie, und **Hilfe → Was ist neu** zeigt
+sie wieder. Clips laufen stumm und lassen sich anhalten; mit reduzierter Bewegung bleiben sie
+stehen, bis du **Abspielen** drückst. Offline zeigt eine Folie statt ihres Bildes das Symbol ihres
+Bereichs. Bei einem neuen Konto erscheint sie nie, und auch nicht über Erfassen oder Scannen. Die
+Höhepunkte sind in jeder Sprache englisch, mit einem Link zu den vollständigen Versionshinweisen
 auf GitHub.
 
-:::tip[Keep the keys]
-Bevor der erste KI-Schlüssel, geheime Wert oder Backup, Kept wartet, bis der Instanzadministrator die
-[Wiederherstellungs-Kit](/de/admin/recovery-kit/) gespeichert hat (Admin → Status fragt danach). Ohne das Kit kann ein Backup
-KI-Schlüssel oder gespeicherte Passwörter auf einem neuen Server nicht wiederherstellen.
+:::tip[Die Schlüssel aufbewahren]
+Vor dem ersten KI-Schlüssel, geheimen Wert oder der ersten Sicherung wartet Kept, bis der
+Instanz-Admin das [Wiederherstellungskit](/de/admin/recovery-kit/) gesichert hat (Admin → Status
+fragt danach). Ohne das Kit kann eine Sicherung auf einem neuen Server keine KI-Schlüssel und
+keine gespeicherten Passwörter zurückbringen.
 :::
