@@ -86,13 +86,13 @@ docker compose exec db psql -U postgres -c "ALTER ROLE kept_app PASSWORD '<the n
 
 **Ursache:** hinter einem Reverse-Proxy sieht Kept für jeden Besucher die Adresse des Proxys, sofern der Proxy nicht in `KEPT_TRUSTED_PROXIES` steht, also teilen sich alle einen Satz Grenzen.
 
-**Lösung:** trage die Adresse des Proxys, wie Kept sie sieht, in `KEPT_TRUSTED_PROXIES` ein ([Reverse-Proxies](/de/install/reverse-proxy/#vertraue-dem-proxy--und-nur-dem-proxy)).
+**Lösung:** trage die Adresse des Proxys, wie Kept sie sieht, in `KEPT_TRUSTED_PROXIES` ein ([Reverse-Proxies](/de/install/reverse-proxy/#dem-proxy-vertrauen-und-nur-dem-proxy)).
 
 ## Uploads schlagen fehl, oder große Fotos kommen nie an
 
 **Ursache:** Kept lehnt eine Datei über `KEPT_MAX_FILE_MB` (standardmäßig 25 MB) mit 413 ab. Ein Proxy davor hat oft ein kleineres Body-Limit und schlägt zuerst fehl.
 
-**Lösung:** setze das Limit des Proxys mindestens auf `KEPT_MAX_FILE_MB` ([Uploads durchlassen](/de/install/reverse-proxy/#lass-uploads-durch)).
+**Lösung:** setze das Limit des Proxys mindestens auf `KEPT_MAX_FILE_MB` ([Uploads durchlassen](/de/install/reverse-proxy/#uploads-durchlassen)).
 
 ## Kamera, Installation, Push oder Standort funktionieren auf Smartphones nicht
 
@@ -110,7 +110,7 @@ docker compose exec db psql -U postgres -c "ALTER ROLE kept_app PASSWORD '<the n
 
 **Ursache:** ohne `KEPT_SMTP_URL` und `KEPT_SMTP_FROM` wird Mail nur als fällig protokolliert, und Admin → Status sagt, dass Mail nicht konfiguriert ist.
 
-**Lösung:** setze beide und starte neu ([Installation](/de/install/compose/#5-weiter)).
+**Lösung:** setze beide und starte neu ([Installation](/de/install/compose/#5-wie-es-weitergeht)).
 
 ## Backups laufen nicht, oder die Meldung "Backup veraltet" erscheint
 

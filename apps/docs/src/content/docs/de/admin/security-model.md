@@ -47,7 +47,7 @@ Kept verwendet Better Auth für seine eigene Anmeldung und sein Schema. Womit si
 
 **Sitzungen** dauern 30 Tage über HTTPS, verlängert einmal pro Nutzungstag, mit Cookies mit `Secure` und `__Secure-`-Präfix. Über unverschlüsseltes HTTP dauern sie 12 Stunden und werden nie verlängert, und Kept verweigert Aktionen, die ein Geheimnis offenbaren oder ändern ([HTTPS](/de/install/https/)). Sensible Aktionen verlangen erneut das Passwort oder eine Anmeldung in den letzten zehn Minuten; das Erneuern einer Anmeldung setzt diese zehn Minuten nicht zurück.
 
-`KEPT_HTTP_SIGN_IN_DAYS` (1 bis 30, standardmäßig unset) lässt diejenigen, die den Server betreiben, eine Anmeldung über unverschlüsseltes HTTP so viele Tage dauern wie angegeben, erneuert bei Nutzung. Es ist die einzige Einstellung, die dies lockert, kann nicht in der App geändert werden und wirkt über HTTPS nicht. Geheimnisse bleiben über HTTP verweigert, die zehn Minuten bleiben, und Abmelden überall beendet weiterhin jede Anmeldung. Der Preis: über unverschlüsseltes HTTP kann ein Anmelde-Cookie von jeder kopiert werden, die den Datenverkehr sehen kann, und mit aktivierter Einstellung bleibt ein kopiertes so lange nutzbar, wie es genutzt wird, bis sich dieses Gerät abmeldet oder die anderen Geräte abgemeldet werden ([In Ihrem Netzwerk bleiben](/de/install/home-network/#bleiben-in-deinem-heimnetz)).
+`KEPT_HTTP_SIGN_IN_DAYS` (1 bis 30, standardmäßig unset) lässt diejenigen, die den Server betreiben, eine Anmeldung über unverschlüsseltes HTTP so viele Tage dauern wie angegeben, erneuert bei Nutzung. Es ist die einzige Einstellung, die dies lockert, kann nicht in der App geändert werden und wirkt über HTTPS nicht. Geheimnisse bleiben über HTTP verweigert, die zehn Minuten bleiben, und Abmelden überall beendet weiterhin jede Anmeldung. Der Preis: über unverschlüsseltes HTTP kann ein Anmelde-Cookie von jeder kopiert werden, die den Datenverkehr sehen kann, und mit aktivierter Einstellung bleibt ein kopiertes so lange nutzbar, wie es genutzt wird, bis sich dieses Gerät abmeldet oder die anderen Geräte abgemeldet werden ([In Ihrem Netzwerk bleiben](/de/install/home-network/#im-eigenen-netz-bleiben)).
 
 **Anfragen von anderen Seiten** werden verweigert: Ein Schreiben, das Kepts Cookie trägt, muss von der Origin von `KEPT_PUBLIC_URL` kommen, sonst gibt es 403, bevor die Sitzung überhaupt gelesen wird. Dasselbe gilt für die Erstinstallation, die noch kein Cookie hat, bevor ihr Setup-Code probiert wird.
 
@@ -67,7 +67,7 @@ Wie ausgeliefert:
 | Passwort-Reset und Magic Link | 3 pro Stunde pro Konto |
 | Seite eines geteilten Links | 60 Aufrufe pro Minute pro Link |
 
-Grenzen werden in der Datenbank gehalten, sodass Replikas sie teilen. Die Adresse des Clients kommt aus dem Socket oder nur aus `X-Forwarded-For`, wenn die Verbindung von einer Adresse in `KEPT_TRUSTED_PROXIES` stammt ([Reverse Proxies](/de/install/reverse-proxy/#vertraue-dem-proxy--und-nur-dem-proxy)).
+Grenzen werden in der Datenbank gehalten, sodass Replikas sie teilen. Die Adresse des Clients kommt aus dem Socket oder nur aus `X-Forwarded-For`, wenn die Verbindung von einer Adresse in `KEPT_TRUSTED_PROXIES` stammt ([Reverse Proxies](/de/install/reverse-proxy/#dem-proxy-vertrauen-und-nur-dem-proxy)).
 
 ## Ausgehende Anfragen (SSRF)
 

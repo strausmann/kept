@@ -53,7 +53,7 @@ alle Besucher das Anmelde-Limit der Proxy teilten. Ein Wert, der schon in `.env`
 sobald du die `compose.yaml` von 1.14.5 heruntergeladen hast
 ([oben](#einstellungen-die-die-neue-composeyaml-brauchen)); einer in `compose.override.yaml` kann nach `.env`
 umziehen. Mit Caddys in `compose.full.yaml` lässt du ihn leer oder behältst `172.29.72.200` in der
-Liste ([Reverse-Proxies](/de/install/reverse-proxy/#vertraue-dem-proxy--und-nur-dem-proxy)).
+Liste ([Reverse-Proxies](/de/install/reverse-proxy/#dem-proxy-vertrauen-und-nur-dem-proxy)).
 
 ### Anmeldelinks (1.14.0)
 
