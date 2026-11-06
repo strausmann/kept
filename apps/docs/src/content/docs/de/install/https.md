@@ -1,6 +1,6 @@
 ---
 title: Kept auf HTTPS umstellen
-description: Warum Kept HTTPS will, und wie du es bekommst - Caddy aus compose.full.yaml, Tailscale, NetBird, Twingate, Cloudflare Tunnel oder dein eigener Proxy.
+description: Warum Kept HTTPS will, und wie du es bekommst - Caddy aus compose.full.yaml, Traefik, Pangolin, Tailscale, NetBird, Twingate, Cloudflare Tunnel oder dein eigener Proxy.
 sidebar:
   order: 2
 ---
@@ -135,6 +135,103 @@ davorschalten. Eine öffentliche Adresse braucht auch eine Web-App wie claude.ai
 
 `cloudflared` erreicht Kept, wie die anderen Tunnel hier, vom selben Rechner aus; vertraue ihm wie
 unter [Reverse-Proxys](/de/install/reverse-proxy/#dem-proxy-vertrauen-und-nur-dem-proxy) beschrieben.
+
+## Traefik
+
+Für ein Traefik, das schon auf diesem Rechner läuft und Container über ihre Docker-Labels findet.
+Kept tritt dem Netz von Traefik bei und trägt die Labels; eine `compose.override.yaml` neben
+`compose.yaml` ergänzt beides, ohne sie zu ändern (`proxy` ist der Name des Netzes von Traefik,
+`websecure` sein https-Entrypoint und `letsencrypt` sein Zertifikats-Resolver: nimm deine):
+
+```yaml
+# compose.override.yaml
+services:
+  kept:
+    networks: [kept, proxy]
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=proxy
+      - traefik.http.routers.kept.rule=Host(`kept.example.org`)
+      - traefik.http.routers.kept.entrypoints=websecure
+      - traefik.http.routers.kept.tls.certresolver=letsencrypt
+      - traefik.http.services.kept.loadbalancer.server.port=8080
+
+networks:
+  proxy:
+    external: true
+```
+
+```sh
+# in .env
+KEPT_PUBLIC_URL=https://kept.example.org
+KEPT_TRUSTED_PROXIES=172.30.0.2
+```
+
+`KEPT_TRUSTED_PROXIES` ist die Adresse von Traefik in diesem Netz (`docker network inspect proxy`);
+gib Traefik dort eine feste Adresse, sonst kann sie sich ändern, wenn Traefik neu angelegt wird.
+Dann `docker compose up -d`. Traefik setzt selbst keine Upload-Grenze, es gilt die von Kept.
+
+## Pangolin
+
+Für eine öffentliche Adresse über einen Pangolin-Server, ohne offenen Port zu Hause. Newt, der
+Site-Connector von Pangolin, läuft neben Kept und liest die Ressource aus den Labels von Kept
+([Blueprints von Pangolin](https://docs.pangolin.net/manage/blueprints)). Lege zuerst die Site in
+Pangolin an, für ihre ID und ihr Secret, und gib Newt eine feste Adresse im Netz von Kept:
+
+```yaml
+# compose.override.yaml
+services:
+  kept:
+    labels:
+      - pangolin.public-resources.kept.name=Kept
+      - pangolin.public-resources.kept.full-domain=kept.example.org
+      - pangolin.public-resources.kept.protocol=http
+      - pangolin.public-resources.kept.ssl=true
+      - pangolin.public-resources.kept.auth.sso-enabled=false
+      - pangolin.public-resources.kept.targets[0].method=http
+      - pangolin.public-resources.kept.targets[0].hostname=kept
+      - pangolin.public-resources.kept.targets[0].port=8080
+      - pangolin.public-resources.kept.targets[0].healthcheck.enabled=true
+      - pangolin.public-resources.kept.targets[0].healthcheck.hostname=kept
+      - pangolin.public-resources.kept.targets[0].healthcheck.port=8080
+      - pangolin.public-resources.kept.targets[0].healthcheck.path=/readyz
+
+  newt:
+    image: fosrl/newt
+    restart: unless-stopped
+    environment:
+      PANGOLIN_ENDPOINT: https://pangolin.example.org
+      NEWT_ID: ${NEWT_ID}
+      NEWT_SECRET: ${NEWT_SECRET}
+      DOCKER_SOCKET: /var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      kept:
+        ipv4_address: 172.29.72.201
+```
+
+```sh
+# in .env
+NEWT_ID=…
+NEWT_SECRET=…
+KEPT_PUBLIC_URL=https://kept.example.org
+KEPT_TRUSTED_PROXIES=172.29.72.201
+```
+
+Dann `docker compose up -d`; die Ressource erscheint im Dashboard von Pangolin.
+
+- **`sso-enabled=false`:** Kept hat eigene Konten. Eine Pangolin-Anmeldung davor würde auch die
+  Handy-App, gescannte Etiketten, die Home-Assistant-Integration und KI-Apps aussperren, die sich
+  nicht bei Pangolin anmelden können.
+- **Die Adresse von Newt:** Newt baut die Verbindungen zu Kept auf, also ist Newt der Proxy, dem
+  Kept vertraut. Eine feste Adresse oberhalb von `172.29.72.127` liegt außerhalb des Bereichs, den
+  Docker im Netz von Kept vergibt.
+- **Der Docker-Socket:** Newt liest die Labels darüber, und wer ihn lesen kann, kann auf diesem
+  Rechner Container starten. Lass die Labels und den Socket weg, wenn du die Ressource lieber im
+  Dashboard von Pangolin anlegst, mit `kept` und Port 8080 als Ziel.
+- **Die Labels bestimmen die Ressource:** Pangolin wendet sie beim Start von Newt erneut an, über
+  Änderungen im Dashboard hinweg.
 
 ## Dein eigener Reverse Proxy
 
