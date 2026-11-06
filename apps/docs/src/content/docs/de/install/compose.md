@@ -21,7 +21,7 @@ docker compose up -d
 ```
 
 `compose.yaml` funktioniert für sich allein, du kannst es also auch in Portainer, Dockge und
-ähnliche Werkzeuge einfügen (siehe [ohne Terminal](#ohne-terminal)).
+ähnliche Tools einfügen (siehe [ohne Terminal](#ohne-terminal)).
 
 :::note[Images]
 Releases erscheinen unter `ghcr.io/keptinventory/kept` mit den Tags `1`, `1.2` und `1.2.3`, nie
@@ -174,11 +174,12 @@ anlegen und dir übergeben, und beendet sich dann.
 
 ## Ohne Terminal
 
-Portainer, Dockge und ähnliche Werkzeuge übernehmen `compose.yaml` (oder `compose.full.yaml`) wie
-es ist. Sie starten `init` nicht, setz deshalb stattdessen zwei Variablen in ihrem
-Umgebungseditor: `KEPT_PUBLIC_URL` (die Adresse, wie oben) und `KEPT_SETUP_CODE` (sechs Zeichen
-aus 0–9 und A–Z ohne I, L, O und U, etwa `KPT-2X9`; oder lass es leer und lies den Code aus dem Log
-von Kept). Leg `KEPT_IMAGE` auf ein Release fest, wenn das Werkzeug es nicht tut.
+Portainer, Dockge und ähnliche Tools übernehmen `compose.yaml` (oder `compose.full.yaml`)
+unverändert. Da sie `init` nicht ausführen, setzt du stattdessen zwei Variablen in ihrem
+Umgebungs-Editor: `KEPT_PUBLIC_URL` (die Adresse, wie oben) und `KEPT_SETUP_CODE` (sechs Zeichen
+aus 0–9 und A–Z ohne I, L, O und U, etwa `KPT-2X9`; oder lass sie leer und lies den Code aus dem
+Log von Kept). Legt das Tool die Image-Version nicht selbst fest, setze `KEPT_IMAGE` auf ein
+bestimmtes Release.
 
 ## Eine Installation von vor 1.13.0
 
