@@ -168,7 +168,7 @@ Die Container von Kept laufen als Benutzer ohne Root-Rechte (uid 10001), mit nur
 Root-Dateisystem, ohne jede Linux-Capability und mit `no-new-privileges`. Der Dienst `migrate`
 hält das Login des Datenbank-Eigentümers; der ausliefernde Container sieht es nie (das Volume
 `kept-owner` ist dort nicht eingehängt), bis du es ihm für die nächtliche Sicherung gibst
-([Sicherungen](/de/admin/backups/#turning-it-on)). `init` ist die eine Ausnahme von der Regel
+([Sicherungen](/de/admin/backups/#aktivieren)). `init` ist die eine Ausnahme von der Regel
 ohne Root: Es läuft als root, ohne Netz und nur mit den Capabilities, die `.env` in deinem Ordner
 anlegen und dir übergeben, und beendet sich dann.
 

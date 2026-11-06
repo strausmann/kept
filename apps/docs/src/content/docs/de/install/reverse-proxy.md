@@ -77,7 +77,7 @@ anderen Adresse als `KEPT_PUBLIC_URL` geöffnet wird.
 - **Mehr als eine Adresse:** `KEPT_EXTRA_ADDRESSES` listet die anderen, und jede muss Kept ebenfalls
   über deinen Proxy erreichen ([Mehr als eine Adresse](/de/install/home-network/#mehr-als-eine-adresse)).
 
-Mehr unter [Fehlerbehebung](/de/admin/troubleshooting/#this-kept-is-set-up-for--or-the-request-did-not-come-from-this-site).
+Mehr unter [Fehlerbehebung](/de/admin/troubleshooting/#dieses-kept-ist-für--eingerichtet-oder-die-anfrage-kam-nicht-von-dieser-website).
 
 ## HSTS
 

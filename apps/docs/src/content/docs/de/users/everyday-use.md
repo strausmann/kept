@@ -6,7 +6,7 @@ description: Startseite, Orte und Kisten, Tabellenansicht, Dinge und Etiketten, 
 Kept beantwortet drei Fragen zu allem, was du besitzt: wo es ist, welche Unterlagen es hat und
 was als Nächstes damit zu tun ist. Diese Seite stellt die Bildschirme vor, die dafür zuständig sind. Welche du siehst,
 hängt von deiner Rolle und davon ab, was jeder Standort verfolgt
-([Voreinstellungen und Rollen](/de/users/first-run/#3-erstelle-dein-erstes-zuhause)). Zum Ausprobieren vor der
+([Voreinstellungen und Rollen](/de/users/first-run/#3-dein-erstes-zuhause-erstellen)). Zum Ausprobieren vor der
 Installation, [Kept ausprobieren](/de/try/kept/) mit einem Beispielhaushalt in deinem Browser.
 
 ## Startseite

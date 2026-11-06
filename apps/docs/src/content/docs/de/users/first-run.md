@@ -51,7 +51,7 @@ selbst ab. Der Pfeil klappt die Schritte auf:
 
 **×** blendet die Checkliste dauerhaft aus; **Hilfe → Checkliste „Erste Schritte“ → Wieder
 anzeigen** holt sie zurück. Sind alle Schritte erledigt, verschwindet sie von selbst. Mehr zur
-Startseite unter [Alltag mit Kept](/de/users/everyday-use/#home).
+Startseite unter [Alltag mit Kept](/de/users/everyday-use/#startseite).
 
 ## 3. Dein erstes Zuhause erstellen
 
@@ -59,7 +59,7 @@ Jeder hat von Anfang an einen Standort **Persönlich**: Er gehört nur dir (kein
 Einladungen oder Freigabelinks), und dort landet alles, was du ohne Standort erfasst. Umbenennen
 kannst du ihn unter **Standorteinstellungen → Allgemein**, dann zeigt Kept überall den neuen
 Namen. Sobald du einen weiteren Standort hast, kannst du ihn unter **Einstellungen → Profil → Deine
-Standorte** [ausblenden](/de/users/locations/#hide-personal). Was ihr gemeinsam nutzt, gehört in
+Standorte** [ausblenden](/de/users/locations/#persönlich-ausblenden). Was ihr gemeinsam nutzt, gehört in
 einen eigenen Standort. Wähle **Dein erstes Zuhause erstellen** (oder **Neuer Standort** auf der
 Startseite):
 

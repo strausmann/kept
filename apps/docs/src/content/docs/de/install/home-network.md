@@ -26,7 +26,7 @@ Browser sie nur unter einer sicheren Adresse erlauben, und daran kann Kept nicht
 | Einen geheimen Wert setzen | Funktioniert | |
 | Einen geheimen Wert anzeigen | Braucht HTTPS | Kept: Ein Geheimnis wird nie über einfaches HTTP gesendet |
 | Export mit geheimen Werten | Braucht HTTPS | Kept: die Geheimnisse und ihre Passphrase |
-| Tokens für KI-Apps (MCP) und Home Assistant | Nicht aus dem Browser. Leg eines auf dem Server an: `kept admin token create` ([CLI](/de/admin/cli/#a-token-from-the-server)) | Kept: Ein Token ist ein Schlüssel |
+| Tokens für KI-Apps (MCP) und Home Assistant | Nicht aus dem Browser. Leg eines auf dem Server an: `kept admin token create` ([CLI](/de/admin/cli/#ein-token-vom-server)) | Kept: Ein Token ist ein Schlüssel |
 | Eine App per OAuth verbinden (ein Connector) | Braucht HTTPS | Kept: OAuth braucht eine sichere Adresse |
 | Das Wiederherstellungskit herunterladen | Nicht aus dem Browser. Auf dem Server: `kept admin recovery-kit` ([CLI](/de/admin/cli/)) | Kept: Es enthält die Schlüssel des Servers |
 | Sicherungseinstellungen und ihr Test | Braucht HTTPS, oder setze sie in der Umgebung des Servers ([Konfiguration](/de/reference/configuration/)) | Kept: das Passwort der Sicherung |
@@ -65,7 +65,7 @@ http**.
 
 Eine Installation, die von 1.14.4 nur durch Ändern von `KEPT_IMAGE` aktualisiert wurde, hat noch die
 alte `compose.yaml`, die diese Einstellung nicht weitergibt:
-[lade zuerst die neue herunter](/de/admin/upgrades/#settings-that-need-the-new-composeyaml).
+[lade zuerst die neue herunter](/de/admin/upgrades/#einstellungen-die-die-neue-composeyaml-brauchen).
 
 **Der Preis:** Über einfaches HTTP kann jeder, der den Datenverkehr sieht, ein Anmelde-Cookie
 kopieren. Mit der Einstellung funktioniert ein kopiertes so lange weiter, wie es benutzt wird, bis
@@ -105,7 +105,7 @@ HTTPS funktioniert es genauso.
 
 Eine Installation, die von 1.14.4 nur durch Ändern von `KEPT_IMAGE` aktualisiert wurde, hat noch die
 alte `compose.yaml`, die diese Einstellung nicht weitergibt:
-[lade zuerst die neue herunter](/de/admin/upgrades/#settings-that-need-the-new-composeyaml).
+[lade zuerst die neue herunter](/de/admin/upgrades/#einstellungen-die-die-neue-composeyaml-brauchen).
 
 | | `KEPT_PUBLIC_URL` | Eine zusätzliche Adresse |
 |---|---|---|

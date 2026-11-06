@@ -12,10 +12,10 @@ Alles, was Kept kann, jeweils mit der Seite, die es erklärt. Manche Funktionen 
 - **[Standorte, Räume und Kisten](/de/users/locations/)**: Wohnungen, Garagen, Lagerabteile; Orte
   in Orten. Verschiebst du eine Kiste, wandert ihr Inhalt mit. Ein Ortsbaum, den du breiter ziehen
   oder zuklappen kannst.
-- **[Persönlich ausblenden](/de/users/locations/#hide-personal)**: Nimm deinen Standort
+- **[Persönlich ausblenden](/de/users/locations/#persönlich-ausblenden)**: Nimm deinen Standort
   „Persönlich“ aus dem Menü, von der Startseite, aus Listen und der Suche, und zeig ihn jederzeit
   wieder an.
-- **[Möbel mit Fächern](/de/users/locations/#furniture-with-compartments)**: ein Würfelregal oder
+- **[Möbel mit Fächern](/de/users/locations/#möbel-mit-fächern)**: ein Würfelregal oder
   eine Kommode, jedes Fach ein eigener Ort. Auf die Seite drehen, Fächer zusammenlegen oder teilen;
   ihre Etiketten funktionieren weiter.
 - **[Gegenstände](/de/users/things/)**: Typen, eigene Felder, Mengen, Zustand, ein Archiv und ein

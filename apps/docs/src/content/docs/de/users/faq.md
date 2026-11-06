@@ -24,7 +24,7 @@ gehört (außer Persönlich), an jemand anderen ab oder lösche ihn; ist das Kon
 Instanz, muss es zuerst einen weiteren Admin ernennen. Danach wartet das Konto 30 Tage: Bei der
 Anmeldung siehst du das Datum und einen Weg, das Konto zu behalten, und sonst öffnet sich nichts.
 Danach wird es zusammen mit deinem Standort Persönlich gelöscht. Was du in Standorten anderer
-hinzugefügt hast, bleibt dort. [Exportiere deine Daten](/de/users/import-export/#exporting) vorher,
+hinzugefügt hast, bleibt dort. [Exportiere deine Daten](/de/users/import-export/#exportieren) vorher,
 wenn du eine Kopie willst.
 
 ## Kann ich Kept ohne KI nutzen?
@@ -45,12 +45,12 @@ Eigentümers dieses Standorts, und du kannst die Ausgaben deckeln. Siehe
 Auf einem Handy mit installiertem Kept ja, für Finden und Erfassen: stöbern, suchen, erfassen,
 Gegenstände verschieben, Ablesungen, Kistenkontrollen und Etiketten scannen. Details bearbeiten,
 Berichte, Importe und Exporte brauchen eine Verbindung. Was du offline tust, wird abgeglichen,
-sobald du wieder online bist. Siehe [Kept auf dem Handy](/de/users/phone-app/#what-works-offline).
+sobald du wieder online bist. Siehe [Kept auf dem Handy](/de/users/phone-app/#was-offline-funktioniert).
 
 ## Gibt es eine App im App Store oder bei Google Play?
 
 Nein. Kept ist eine Web-App, die du aus dem Browser zum Startbildschirm hinzufügst. Dafür muss Kept
-über HTTPS laufen. Siehe [Kept auf dem Handy](/de/users/phone-app/#install-it) und
+über HTTPS laufen. Siehe [Kept auf dem Handy](/de/users/phone-app/#installieren) und
 [HTTPS](/de/install/https/).
 
 ## Läuft es auf arm64 oder einem Raspberry Pi?
@@ -97,11 +97,11 @@ nur dann als verkauft an, wenn Homebox einen Käufer oder einen Preis dafür hat
 allein bleibt in seinen Notizen), und archivierte Gegenstände kommen als **Archiviert** an, es sei
 denn, du wählst **In Gebrauch** oder **Weglassen**. Verbinde zuerst
 [Paperless-ngx](/de/users/paperless/), dann kommen die Links von Homebox auf seine Dokumente als
-Paperless-Links an. Siehe [Import und Export](/de/users/import-export/#a-homebox-export); ein
-Import von vor 1.14.1 lässt sich [reparieren](/de/users/import-export/#repairing-an-earlier-import).
+Paperless-Links an. Siehe [Import und Export](/de/users/import-export/#ein-homebox-export); ein
+Import von vor 1.14.1 lässt sich [reparieren](/de/users/import-export/#einen-früheren-import-reparieren).
 Ein älteres Homebox hat keine Sicherung, die Kept lesen kann: Aktualisiere zuerst eine Kopie davon
 oder importiere seine Tabelle. Siehe
-[von einem älteren Homebox kommen](/de/users/import-export/#coming-from-an-older-homebox).
+[von einem älteren Homebox kommen](/de/users/import-export/#von-einem-älteren-homebox-kommen).
 
 ## Wie sichere ich es?
 
@@ -110,7 +110,7 @@ einer lesbaren Kopie jedes Standorts an, auf einer anderen Festplatte, in einem 
 einem SFTP-Server. Bewahre das Wiederherstellungskit woanders auf. Um einen Standort mitzunehmen,
 exportiere ihn. Siehe [Sicherungen](/de/admin/backups/),
 [das Wiederherstellungskit](/de/admin/recovery-kit/) und
-[Import und Export](/de/users/import-export/#exporting).
+[Import und Export](/de/users/import-export/#exportieren).
 
 ## Und wenn der Server mit dem Haus verloren geht?
 

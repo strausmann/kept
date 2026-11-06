@@ -131,7 +131,7 @@ ingress:
 
 Setze `KEPT_PUBLIC_URL` auf `https://kept.example.org`. Cloudflare Access kann eine Anmeldung
 davorschalten. Eine öffentliche Adresse braucht auch eine Web-App wie claude.ai, um sich
-[mit dem MCP-Server von Kept zu verbinden](/de/users/mcp-clients/#connect-as-a-connector-oauth).
+[mit dem MCP-Server von Kept zu verbinden](/de/users/mcp-clients/#als-connector-verbinden-oauth).
 
 `cloudflared` erreicht Kept, wie die anderen Tunnel hier, vom selben Rechner aus; vertraue ihm wie
 unter [Reverse-Proxys](/de/install/reverse-proxy/#dem-proxy-vertrauen-und-nur-dem-proxy) beschrieben.

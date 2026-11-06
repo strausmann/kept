@@ -205,7 +205,7 @@ lässt Betrachter es sehen; der Assistent antwortet, kann aber nichts ändern.
 ## W
 
 **Was ist neu**: die Karte nach einer Aktualisierung von Kept, mit den Highlights dieser Version, einmal pro Person;
-**Hilfe** zeigt sie wieder. [Eine Tour machen](/de/users/first-run/#7-eine-tour-machen)
+**Hilfe** zeigt sie wieder. [Eine Tour machen](/de/users/first-run/#7-die-tour)
 
 ## Verwandtes
 
