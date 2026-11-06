@@ -14,7 +14,7 @@ export const sidebarLabels = {
   Install: {
     ar: 'التثبيت',
     fr: 'Installation',
-    de: 'Installation',
+    de: 'Installieren',
     it: 'Installazione',
     uk: 'Встановлення',
     vi: 'Cài đặt',
@@ -23,7 +23,7 @@ export const sidebarLabels = {
   'Backups and restore': {
     ar: 'النسخ الاحتياطي والاستعادة',
     fr: 'Sauvegardes et restauration',
-    de: 'Backups und Wiederherstellung',
+    de: 'Sicherung und Wiederherstellung',
     it: 'Backup e ripristino',
     uk: 'Резервні копії та відновлення',
     vi: 'Sao lưu và khôi phục',
@@ -41,7 +41,7 @@ export const sidebarLabels = {
   'Build on Kept': {
     ar: 'التطوير',
     fr: 'Développer avec Kept',
-    de: 'Auf Kept aufbauen',
+    de: 'Mit Kept entwickeln',
     it: 'Costruire su Kept',
     uk: 'Розробка на Kept',
     vi: 'Xây dựng trên Kept',
@@ -50,7 +50,7 @@ export const sidebarLabels = {
   'Maintain Kept': {
     ar: 'صيانة المشروع',
     fr: 'Maintenir Kept',
-    de: 'Kept pflegen',
+    de: 'Das Projekt pflegen',
     it: 'Mantenere Kept',
     uk: 'Підтримка Kept',
     vi: 'Bảo trì Kept',

@@ -10,7 +10,7 @@ export type Row = readonly [name: string, title: string, body: string];
 export const groupNames: Record<string, Record<OtherLang, string>> = {
   'bring-in': {
     fr: 'Faire entrer des objets',
-    de: 'Gegenstände hereinholen',
+    de: 'Gegenstände übernehmen',
     it: 'Portare dentro gli oggetti',
     uk: 'Додати речі',
     vi: 'Đưa đồ vật vào',

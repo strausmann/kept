@@ -56,7 +56,7 @@ Startseite unter [Alltag mit Kept](/de/users/everyday-use/#startseite).
 ## 3. Dein erstes Zuhause erstellen
 
 Jeder hat von Anfang an einen Standort **Persönlich**: Er gehört nur dir (keine Mitglieder,
-Einladungen oder Freigabelinks), und dort landet alles, was du ohne Standort erfasst. Umbenennen
+Einladungen oder geteilte Links), und dort landet alles, was du ohne Standort erfasst. Umbenennen
 kannst du ihn unter **Standorteinstellungen → Allgemein**, dann zeigt Kept überall den neuen
 Namen. Sobald du einen weiteren Standort hast, kannst du ihn unter **Einstellungen → Profil → Deine
 Standorte** [ausblenden](/de/users/locations/#persönlich-ausblenden). Was ihr gemeinsam nutzt, gehört in
@@ -109,7 +109,7 @@ die Registrierung geschlossen ist, ist die Einladung der einzige Weg zu einem Ko
 | Rolle | Was sie in diesem Standort darf |
 |---|---|
 | **Eigentümer** | Alles, auch Zwei-Faktor-Regeln, Übertragen und Löschen. Es gibt einen Eigentümer. |
-| **Admin** | Mitglieder und Betrachter einladen und entfernen, Einstellungen und Module, Import und Export, Freigabelinks und Schadenspakete, endgültig löschen. Nur der Eigentümer ernennt oder entfernt Admins. |
+| **Admin** | Mitglieder und Betrachter einladen und entfernen, Einstellungen und Module, Import und Export, geteilte Links und Schadenspakete, endgültig löschen. Nur der Eigentümer ernennt oder entfernt Admins. |
 | **Mitglied** | Gegenstände hinzufügen, bearbeiten, verschieben, verleihen und in den Papierkorb legen; Ablesungen und Wartungen eintragen; Etiketten drucken; mit KI erfassen. Geldbeträge sind sichtbar. |
 | **Betrachter** | Nur ansehen und suchen. Geldbeträge sind verborgen, wenn der Standort sie Betrachtern nicht erlaubt; der Assistent antwortet, kann aber nichts ändern. |
 

@@ -76,7 +76,7 @@ Alles, was Kept kann, jeweils mit der Seite, die es erklärt. Manche Funktionen 
 
 - **[Einen Standort teilen](/de/users/sharing/)**: Leute mit einer Rolle (Admin, Mitglied,
   Betrachter) und einem optionalen Enddatum einladen; verwaltete Konten für Menschen ohne E-Mail;
-  Freigabelinks nur zum Ansehen für jemanden ohne Konto.
+  geteilte Links nur zum Lesen für jemanden ohne Konto.
 - **[Anmeldung und Sicherheit](/de/users/sign-in-security/)**: Passkeys und Zwei-Faktor-Anmeldung;
   im Heimnetz über einfaches http
   [Anmeldungen so lange, wie der Admin festlegt](/de/install/home-network/#längere-anmeldungen-über-einfaches-http);

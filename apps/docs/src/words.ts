@@ -44,10 +44,10 @@ export const hero: Words<HeroWords> = {
       'La carte 3D de Kept pour une maison : ses pièces en vue isométrique, chacune nommée, avec meubles et boîtes, à côté de l’arbre des emplacements du lieu',
   },
   de: {
-    eyebrow: 'Neu: die 3D-Karte',
+    eyebrow: 'Neu · Der 3D-Raumplan',
     facts: ['AGPL-3.0', 'Docker oder Kubernetes', 'Handy-App, auch offline'],
     mapAlt:
-      'Die 3D-Karte von Kept für ein Zuhause: die Räume in isometrischer Ansicht, jeweils benannt, mit Möbeln und Kisten, neben dem Ortsbaum des Standorts',
+      'Der 3D-Raumplan von Kept für ein Zuhause: die Räume in isometrischer Ansicht, jeweils benannt, mit Möbeln und Kisten, neben dem Ortsbaum des Standorts',
   },
   it: {
     eyebrow: 'Novità: la mappa 3D',
@@ -218,9 +218,9 @@ export const tryKept: Words<TryKeptWords> = {
     note: 'Die ganze App mit einem Beispielhaushalt, in deinem Browser. Nichts wird gespeichert oder gesendet.',
     open: 'Kept öffnen',
     desktop:
-      'Der Start von Kept am Computer: Erste Schritte, die Kacheln „Braucht dich“, die Standorte mit Kartenvorschau, Schnellzugriff und Einblicke',
+      'Start von Kept auf einem Desktop: Erste Schritte, die Kacheln unter „Braucht dich“, die Standorte mit der Vorschau ihres Raumplans, Kurzbefehle und Einblicke',
     phone:
-      'Der Start von Kept am Handy: die Kacheln „Braucht dich“ und der Schnellzugriff, über der Tab-Leiste',
+      'Start von Kept auf einem Handy: die Kacheln unter „Braucht dich“ und die Kurzbefehle über der Tab-Leiste',
   },
   it: {
     note: 'Tutta l’app con una famiglia di esempio, nel tuo browser. Non viene salvato né inviato nulla.',
@@ -303,15 +303,15 @@ export const tryMap: Words<TryMapWords> = {
     ],
   },
   de: {
-    note: 'Ein Beispielzuhause, in deinem Browser. Nichts, was du änderst, wird gespeichert oder irgendwohin gesendet.',
+    note: 'Ein Beispielhaus, in deinem Browser. Nichts, was du änderst, wird gespeichert oder irgendwohin gesendet.',
     reset: 'Zurücksetzen',
     install: 'Kept installieren',
-    loading: 'Karte wird geladen…',
-    failed: 'Die Karte konnte nicht geladen werden. Lade die Seite neu, um es erneut zu versuchen.',
-    noscript: 'Die Karte braucht JavaScript.',
+    loading: 'Der Raumplan wird geladen…',
+    failed: 'Der Raumplan konnte nicht geladen werden. Lade die Seite neu, um es noch einmal zu versuchen.',
+    noscript: 'Der Raumplan braucht JavaScript.',
     credit: [
-      'Möbel, Pflanzen, Werkzeuge und die Klimageräte sind kostenlose Modelle von ',
-      ' (CC0), für Handys verkleinert. Schalte „Detaillierte Modelle“ aus, um keine herunterzuladen.',
+      'Möbel, Pflanzen, Werkzeuge und die Klimageräte sind freie Modelle von ',
+      ' (CC0), für Handys verkleinert. Schalte „Detailed models“ aus, dann wird keines heruntergeladen.',
     ],
   },
   it: {
