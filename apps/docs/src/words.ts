@@ -44,7 +44,7 @@ export const hero: Words<HeroWords> = {
       'La carte 3D de Kept pour une maison : ses pièces en vue isométrique, chacune nommée, avec meubles et boîtes, à côté de l’arbre des emplacements du lieu',
   },
   de: {
-    eyebrow: 'Neu · Der 3D-Raumplan',
+    eyebrow: 'Neu: der 3D-Raumplan',
     facts: ['AGPL-3.0', 'Docker oder Kubernetes', 'Handy-App, auch offline'],
     mapAlt:
       'Der 3D-Raumplan von Kept für ein Zuhause: die Räume in isometrischer Ansicht, jeweils benannt, mit Möbeln und Kisten, neben dem Ortsbaum des Standorts',
